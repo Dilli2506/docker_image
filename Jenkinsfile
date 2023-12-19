@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t dilli2506/jenkins-docker-hub .'
+        sh 'docker build -t dilli2506/docker_image .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push dilli2506/jenkins-docker-hub'
+        sh 'docker push dilli2506/docker_image'
       }
     }
   }
